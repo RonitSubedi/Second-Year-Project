@@ -1,0 +1,26 @@
+.loading-overlay {
+  position: fixed; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: rgba(240,244,248,0.92);
+  backdrop-filter: blur(4px);
+  z-index: 9999; gap: 14px;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.loading-spinner {
+  width: 40px; height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: ls-spin 0.75s linear infinite;
+}
+
+@keyframes ls-spin { to { transform: rotate(360deg); } }
+
+.loading-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  letter-spacing: -0.1px;
+}
