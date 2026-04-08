@@ -16,7 +16,7 @@
   },
   "headers": [
     {
-      "source": "/api/:path*",
+      "source": "/:path*",
       "headers": [
         {
           "key": "Access-Control-Allow-Credentials",
@@ -32,15 +32,39 @@
         },
         {
           "key": "Access-Control-Allow-Headers",
-          "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
+          "value": "Content-Type, Authorization, X-Requested-With"
         }
       ]
     }
   ],
   "rewrites": [
     {
-      "source": "/api/:path*",
-      "destination": "/_/backend/api/:path*"
+      "source": "/api/auth/:path*",
+      "destination": "/_/backend/auth/:path*"
+    },
+    {
+      "source": "/api/payment/:path*",
+      "destination": "/_/backend/payment/:path*"
+    },
+    {
+      "source": "/api/registration/:path*",
+      "destination": "/_/backend/registration/:path*"
+    },
+    {
+      "source": "/api/feedback/:path*",
+      "destination": "/_/backend/feedback/:path*"
+    },
+    {
+      "source": "/api/user/:path*",
+      "destination": "/_/backend/user/:path*"
+    },
+    {
+      "source": "/api/bus-location/:path*",
+      "destination": "/_/backend/bus-location/:path*"
+    },
+    {
+      "source": "/socket.io/:path*",
+      "destination": "/_/backend/socket.io/:path*"
     }
   ]
 }
