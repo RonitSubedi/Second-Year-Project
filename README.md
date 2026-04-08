@@ -167,8 +167,8 @@ Body (JSON):
 POST http://localhost:5000/api/auth/login
 Body (JSON):
 {
-  "email": "admin@iic.edu.np",
-  "password": "admin123"
+  "email": "",
+  "password": ""
 }
 → Returns: { token, role, user }
 ```
